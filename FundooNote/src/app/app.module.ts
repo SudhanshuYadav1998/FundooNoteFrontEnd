@@ -11,12 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { GetemailComponent } from './Components/getemail/getemail.component';
+import { RecoverpasswordComponent } from './Components/recoverpassword/recoverpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    GetemailComponent
+    GetemailComponent,
+    RecoverpasswordComponent
   ],
   imports: [
     BrowserModule,
