@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { }  
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
