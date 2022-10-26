@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class GetemailComponent implements OnInit {
   forgotemailForm!: FormGroup;
-
+  
   constructor( private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
