@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { GetemailComponent } from './Components/getemail/getemail.component';
 import { RecoverpasswordComponent } from './Components/recoverpassword/recoverpassword.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { RecoverpasswordComponent } from './Components/recoverpassword/recoverpa
     MatInputModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
