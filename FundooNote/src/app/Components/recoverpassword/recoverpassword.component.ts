@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './recoverpassword.component.html',
   styleUrls: ['./recoverpassword.component.scss']
 })
-export class RecoverpasswordComponent implements OnInit {
+export class RecoverpasswordComponent implements OnInit {  
   forgotpasswordForm!: FormGroup;
 
   constructor( private formBuilder: FormBuilder , private activatedroute: ActivatedRoute) { }
