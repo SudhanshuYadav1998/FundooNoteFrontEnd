@@ -19,6 +19,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    if(this.signinForm.valid){
+      console.log("sign in works");
+      
+    }
+    else{
+      console.log("not works");
+      
+    }
   }
 
 }
