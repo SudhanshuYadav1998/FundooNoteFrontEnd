@@ -24,4 +24,12 @@ return this.http.postservice('https://localhost:44391/api/User/Register',data,fa
   }
   return this.http.postservice('https://localhost:44391/api/User/Login',data,false,header)
 }
+forgotpassword(data:any){
+  let header={
+    Headers:new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+}
+return this.http.postservice('https://localhost:44391/api/User/ForgotPassword',data,false,header)
+}
 }
