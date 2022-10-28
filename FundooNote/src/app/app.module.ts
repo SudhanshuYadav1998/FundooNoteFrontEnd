@@ -14,14 +14,34 @@ import { GetemailComponent } from './Components/getemail/getemail.component';
 import { RecoverpasswordComponent } from './Components/recoverpassword/recoverpassword.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
+import {MatListModule} from '@angular/material/list';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
+import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { CreatenoteComponent } from './Components/createnote/createnote.component';
+import { DisplayComponent } from './Components/display/display.component';
+import { IconsComponent } from './Components/icons/icons.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     GetemailComponent,
-    RecoverpasswordComponent
+    RecoverpasswordComponent,
+    DashboardComponent,
+    ArchieveComponent,
+    GetallnotesComponent,
+    TrashComponent,
+    CreatenoteComponent,
+    DisplayComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +52,11 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     MatCheckboxModule,
     FormsModule, ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
