@@ -28,6 +28,8 @@ import { TrashComponent } from './Components/trash/trash.component';
 import { CreatenoteComponent } from './Components/createnote/createnote.component';
 import { DisplayComponent } from './Components/display/display.component';
 import { IconsComponent } from './Components/icons/icons.component';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,8 @@ import { IconsComponent } from './Components/icons/icons.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

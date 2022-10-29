@@ -1,0 +1,39 @@
+.example-card {
+    width: 250px;
+    // border: 2px solid red;
+    border: 1px solid gainsboro ;
+    height: auto;
+    // margin-top: -20%;
+    // margin-left: 5%;
+    border-radius: 15px;
+  }
+  // .example-card:hover{
+  //   border: 1px solid gainsboro ;
+  // }
+
+.pinbutton{
+    // border: 2px solid blue;
+     width: 25px;
+     height: 25px;
+    border: none; 
+    background: none; 
+    // background-color: white;
+    cursor: pointer;
+    // margin-top: 5px;
+     
+  }
+  .pin{
+    // border: 2px solid green;
+    // margin-right: 35%;
+    margin-left: 231px;
+    //margin-top: .5%;
+    margin-bottom: -7px;
+    opacity: 0.54;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    background: none;
+   // visibility: hidden;
+
+  }

@@ -1,25 +1,91 @@
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="primary" class="example-toolbar">
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <h1 class="example-app-name">Fundoo</h1>
-    </mat-toolbar>
-  
-    <mat-sidenav-container class="example-sidenav-container"
-                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-        <mat-nav-list>
-          <a mat-list-item routerLink="/dashboard/notes" >Notes</a>
-          <a mat-list-item routerLink="/dashboard/archieve" >Archieve</a>
-          <a mat-list-item routerLink="/dashboard/trash" >Trash</a>
-          <a mat-list-item routerLink="." >Edit</a>
+    <div class="mydiv">
+        <div>
+            <mat-toolbar class="example-toolbar">
+                <button mat-icon-button (click)="snav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <img class="keepIcon" src="../../../assets/keepimage.png">
+                <h1 class="example-app-name">
+                    <div class="funDo">
+                        <h2 class="F">F</h2>
+                        <h2 class="u">u</h2>
+                        <h2 class="n">n</h2>
+                        <h2 class="D">D</h2>
+                        <h2 class="o">o</h2>
+                        <h2 class="oo">o</h2>
+                    </div>
+                </h1>
+            </mat-toolbar>
+        </div>
+                    <form class="searchBar">
+                        <button class="newIcon">
+                            <span role="button" class="material-symbols-outlined">search</span>
+                        </button>
+                        <div class="sea">
+                            <input class="search" type="text" placeholder="Search">
+                        </div>
+                    </form>
+        <div class="cyDiv">
+            <span role="button" class="material-symbols-outlined">refresh</span>
+            <span role="button" class="material-symbols-outlined">grid_view</span>
+            <span role="button" class="material-symbols-outlined">settings</span>
+        </div>
+        <div class="profile">
+            <span class="material-symbols-outlined">apps</span>
+            <span class="material-symbols-outlined">account_circle</span>
+        </div>
+    </div>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav style="width: 300px;" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <div class="contDiv">
+                <mat-nav-list>
+                    <div class="NoteDi">
+                        <div role="button" class="NoteD " routerLink="/dashboard/notes">
+                            <div class="IconDiv">
+                                <a mat-list-item>Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="NoteDi">
+                        <div role="button" class="NoteD" routerLink=".">
+                            <div class="IconDiv">
+                                <a mat-list-item>Reminders</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="NoteDi">
+                        <div role="button" class="NoteD" routerLink=".">
+                            <div class="IconDiv">
+                                <a mat-list-item>Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="NoteDi">
+                        <div role="button" class="NoteD" routerLink="/dashboard/archieve">
+                            <div class="IconDiv">
+                                <a mat-list-item>Archive</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="NoteDi">
+                        <div role="button" class="NoteD">
+                            <div class="IconDiv" routerLink="/dashboard/trash">
+                                <a mat-list-item>Trash</a>
+                            </div>
+                        </div>
+                    </div>
+                </mat-nav-list>
+            </div>
+        </mat-sidenav>
 
-
-        </mat-nav-list>
-      </mat-sidenav>
-  
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
     </mat-sidenav-container>
-  </div>
+</div>
