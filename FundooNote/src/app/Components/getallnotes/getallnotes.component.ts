@@ -14,7 +14,7 @@ export class GetallnotesComponent implements OnInit {
   ngOnInit(): void {
     this.getallnotes();
   }
-  getallnotes(){
+  getallnotes(){ 
     this.note.getallnote().subscribe((response:any)=>
     console.log(response)
     
