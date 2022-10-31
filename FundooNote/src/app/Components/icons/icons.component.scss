@@ -20,13 +20,13 @@
     -webkit-font-smoothing: antialiased;
   }
   .mydiv {
-    padding-top: 7px;
-    padding-right: 10px;
-    border: 1px;
-    margin: 0 8px;
+    // padding-top: 7px;
+    // padding-right: 10px;
+    // border: 1px;
+    // margin: 0 2px;
 
     .material-symbols-outlined {
-        padding: 18px;
+        padding: 10px;
     }
     cursor: pointer;
     :hover {
@@ -34,15 +34,24 @@
         background-color: #f1f3f4;
     }
 
-    .material-symbols-outlined {
-        border: 15px;
-        border-color: aqua;
-        font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 40
+    // .material-symbols-outlined {
+    //     border: 1px;
+    //     border-color: aqua;
+    //     font-variation-settings:
+    //         'FILL' 0,
+    //         'wght' 400,
+    //         'GRAD' 0,
+    //         'opsz' 40
     
-    }
+    // }
 }
+.container{
+  // border: 1px solid red;
+  
+    // border: 2px solid rebeccapurple;
+    width: 25vw;
+    height: 8vh;
+    background-color: white;
+}
+
 

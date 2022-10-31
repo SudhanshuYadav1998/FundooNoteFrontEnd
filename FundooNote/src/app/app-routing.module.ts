@@ -8,6 +8,9 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
 import { ArchieveComponent } from './Components/archieve/archieve.component';
+import { CreatenoteComponent } from './Components/createnote/createnote.component';
+import { DisplayComponent } from './Components/display/display.component';
+import { IconsComponent } from './Components/icons/icons.component';
 
 
 
@@ -18,6 +21,9 @@ const routes: Routes = [
  { path:'signin',component:LoginComponent},
  { path:'forgotemail',component:GetemailComponent},
  { path:'resetpassword',component:RecoverpasswordComponent},
+ {path:'create',component:CreatenoteComponent},
+ {path:'display',component:DisplayComponent},
+ {path:'icons',component:IconsComponent},
  {path:'dashboard',
  component:DashboardComponent,
 children:[

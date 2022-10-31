@@ -1,7 +1,7 @@
 .section{
     // border: 2px solid rebeccapurple;
     width: 100vw;
-    height: 30vh;
+    height: 43vh;
     background-color: white;
 }
 
@@ -25,13 +25,13 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 1%;
-    top: -3%;
+    left: 0px;
+    top: 10%;
     width: 80%;
     color: #202124;
     font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
    // line-height: 1;
     
 }
@@ -45,15 +45,15 @@
       position: relative;
       top: -12%;
       //left: 8%;
-      width: 100%;
+      width: 70%;
       // height: 50%;
       display: flex;
       justify-content: space-between;
       font-size: 14px;
       height: 35px;
       padding: 6px 8px;
-      margin: 2px;
-      border-radius: 3px;
+    //   margin: 2px;
+    //   border-radius: 3px;
 
 }
 .mat-form-field {
@@ -64,10 +64,11 @@
 
 .button{
     // border: 2px solid blue;
-    position: relative;
+    position: absolute;
      right: 80%;
-    // top: 2%;
-    left: 900%;
+    //  top: 2%;
+    left: 90%;
+    bottom: 3%;
     // color: blue;
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     color: var(--gm-colortextbutton-ink-color,#5f646b);
@@ -83,8 +84,9 @@
 .imageandpara{
     // border: 2px solid red;
     position: relative;
-    left:130%;
+    left:73%;
     width: 250px;
+    background-color: white;
     height: 40%;
     top: 2%;
     // bottom: 48%;
@@ -94,6 +96,4 @@
     width: 25px;
     height: 25px;
 }
-
-
 
