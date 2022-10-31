@@ -24,8 +24,6 @@ token:any;
 }
 getallnote(){    
   console.log(this.token);
-  
-  
   let header={
     headers:new HttpHeaders({
       'Content-Type': 'application/json',
