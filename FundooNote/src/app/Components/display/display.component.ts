@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-display',
@@ -9,7 +8,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export class DisplayComponent implements OnInit {
   @Input() displayMessage: any;
 
-  constructor(private dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

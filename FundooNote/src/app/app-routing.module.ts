@@ -32,9 +32,7 @@ children:[
   { path:'archieve',component:ArchieveComponent}
 ]
 }
- 
-    
-   
+  
    ]
 
 @NgModule({
