@@ -15,4 +15,8 @@ export class HttpService {
   {
     return this.httpclient.get(url, token && options)
   }
+  putservice(url:string,data:any,token:boolean=true,options:any)
+  {
+   return this.httpclient.post(url,data,token && options)
+  }
 }
