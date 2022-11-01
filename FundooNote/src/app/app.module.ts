@@ -29,6 +29,7 @@ import { CreatenoteComponent } from './Components/createnote/createnote.componen
 import { DisplayComponent } from './Components/display/display.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatCardModule} from '@angular/material/card';
     TrashComponent,
     CreatenoteComponent,
     DisplayComponent,
-    IconsComponent
+    IconsComponent,
+    UpdatenoteComponent
   ],
   imports: [
     BrowserModule,

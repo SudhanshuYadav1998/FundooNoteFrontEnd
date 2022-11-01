@@ -1,14 +1,18 @@
-<div fxLayout="row wrap" fxLayoutGap="20px grid" style="padding-top: 5%; padding-left: 10%;">
+<div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 5%; padding-left: 10%;">
 
-    <div fxLayout="column" fxLayoutAlign=" center" >
+    <div fxLayout="column" fxLayoutAlign=" center" *ngFor="let note of displayMessage" >
 
         <mat-card class="example-card">
             <button class="pinbutton">
                 <img class="pin" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48 (2).svg" alt="">
             </button>
-            <mat-card>Title</mat-card>
+            <mat-card-title>
+              {{note.title}} 
+            </mat-card-title>
             <div class="title">
-                <mat-card>Description</mat-card>
+                <mat-card-subtitle>
+                    {{note.description}}
+                </mat-card-subtitle>
             </div>
             <div class="icons">
                 <app-icons></app-icons>
