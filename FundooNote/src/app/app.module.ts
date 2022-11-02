@@ -29,7 +29,8 @@ import { CreatenoteComponent } from './Components/createnote/createnote.componen
 import { DisplayComponent } from './Components/display/display.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import {MatCardModule} from '@angular/material/card';
-
+import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import {MatCardModule} from '@angular/material/card';
     CreatenoteComponent,
     DisplayComponent,
     IconsComponent,
+    UpdatenoteComponent,
     
   ],
   imports: [
@@ -60,7 +62,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

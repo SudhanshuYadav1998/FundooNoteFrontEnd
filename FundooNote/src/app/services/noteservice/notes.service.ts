@@ -32,16 +32,17 @@ getallnote(){
   }
  return this.http.getservice('https://localhost:44391/api/Notes/GetAllNotes',true,header)
 }
-// updatenote(data:any){    
-//   console.log(data,this.token);
+updatenote(data:any,id:any){
+
+  console.log(data,this.token);
   
   
-//   let header={
-//     headers:new HttpHeaders({
-//       'Content-Type': 'application/json',
-//       'Authorization':'Bearer '+this.token
-//     })
-//   }
-//  return this.http.putservice('https://localhost:44391/api/Notes/Update',data,true,header)
-// }
+  let header={
+    headers:new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':'Bearer '+this.token
+    })
+  }
+ return this.http.putservice(`https://localhost:44391/api/Notes/Update?noteId=${id}`,data,true,header)
+}
 }

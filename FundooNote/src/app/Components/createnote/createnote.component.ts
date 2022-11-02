@@ -9,6 +9,7 @@ import { NotesService } from 'src/app/services/noteservice/notes.service';
 })
 export class CreatenoteComponent implements OnInit {
   createForm!:FormGroup;
+  show=false;
 
   constructor(private formBuilder: FormBuilder,private note:NotesService) { }
 
@@ -18,7 +19,11 @@ export class CreatenoteComponent implements OnInit {
       description: ['', Validators.required],
     })   
   }
-  close():void{
+  isshow(){
+    this.show=true;
+  }
+  close(){
+    this.show=false;
     if(this.createForm.valid){
       console.log("add note in works");
       let payload={

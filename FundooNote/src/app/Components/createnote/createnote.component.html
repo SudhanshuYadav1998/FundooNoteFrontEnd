@@ -3,26 +3,29 @@
     <div class="form" fxLayout.xs="column">
         <div fxLayout="column" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
             
-            <div class="title">
+            <div class="title" *ngIf="show || !show" (click)="isshow()" >
 
                     <mat-form-field appearance="outline">
                         <input type="text" formControlName="title" matInput placeholder="title">
                     </mat-form-field>
 
             </div>
-              <div class="takenote">
+              <div class="takenote" *ngIf="show">
 
                     <mat-form-field appearance="outline">
                         <input type="text" formControlName="description" matInput placeholder="Take a note..">
                     </mat-form-field>
                 </div>
                 
-                <div class="closebutton" fxLayout="row" fxLayoutAlign="space-evenly center">
+                <div class="closebutton" *ngIf="show"  fxLayout="row" fxLayoutAlign="space-evenly center">
                   
-                        <app-icons></app-icons>
+                        
                    
                     <button class="button" fxLayout.xs="row" >Close</button>
 
+                </div>
+                <div class="icon" >
+                    <app-icons></app-icons>
                 </div>
 
 
