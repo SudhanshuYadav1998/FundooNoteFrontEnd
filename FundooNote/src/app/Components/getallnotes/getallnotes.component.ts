@@ -20,9 +20,7 @@ export class GetallnotesComponent implements OnInit {
    console.log(this.notelist= response);
    this.notelist =this.notelist.filter((data:any) => {  
     console.log(data.trash)
-    return data.trash === false && data.archieve === false;
-    
-   
+    return data.trash === false && data.archieve === false;  
   })
     
   })
