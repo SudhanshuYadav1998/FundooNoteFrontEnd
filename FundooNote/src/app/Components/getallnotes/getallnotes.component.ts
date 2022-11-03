@@ -8,22 +8,22 @@ import { NotesService } from 'src/app/services/noteservice/notes.service';
   styleUrls: ['./getallnotes.component.scss']
 })
 export class GetallnotesComponent implements OnInit {
- notelist:any;
+  notelist: any;
 
-  constructor(private note:NotesService) { }
+  constructor(private note: NotesService) { }
 
   ngOnInit(): void {
     this.getallnotes();
   }
-  getallnotes(){ 
-    this.note.getallnote().subscribe((response:any)=>{
-   console.log(this.notelist= response);
-   this.notelist =this.notelist.filter((data:any) => {  
-    console.log(data.trash)
-    return data.trash === false && data.archieve === false;  
-  })
-    
-  })
+  getallnotes() {
+    this.note.getallnote().subscribe((response: any) => {
+      console.log(this.notelist = response);
+      this.notelist = this.notelist.filter((data: any) => {
+        console.log(data.trash)
+        return data.trash === false && data.archieve === false;
+      })
+
+    })
 
   }
 

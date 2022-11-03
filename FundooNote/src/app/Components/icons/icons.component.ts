@@ -30,13 +30,14 @@ export class IconsComponent implements OnInit {
       
     })
   }
+  
   Unarchive(){
      
     let reqdata={
       
-      archive:false,  // it is coming from backend api
+      archive:false,  
     }
-    this.note.archievenote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
+    this.note.unarchievenote (reqdata,this.notecard.noteId).subscribe((response:any) =>{
       console.log("Note is Unarchived");
 
       console.log(response);
@@ -57,7 +58,17 @@ export class IconsComponent implements OnInit {
     })
     
   }
+  deletenotes(){
+    let reqdata={
+      
+      trash:true,  // it is coming from backend api
+    }
+    this.note.deletenote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
+      console.log("Note is deleted");
 
-  
-
+      console.log(this.notecard=response);
+      
+    })
+    
+  }
 }

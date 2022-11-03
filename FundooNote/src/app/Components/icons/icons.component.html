@@ -1,18 +1,27 @@
 <div class="container">
     <div class="mydiv" fxLayout="row" fxLayoutAlign="space-evenly center">
-        <span role="button" (click)="Archivenote()" class="material-symbols-outlined">
-            archive
-        </span>
-        <button [matMenuTriggerFor]="menu"><span role="button" class="material-symbols-outlined">
-            add_alert
 
-        </span></button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item >Later Today</button>
-        <button mat-menu-item>Tomorrow</button>
-        <button mat-menu-item >Next week</button>
-        <button mat-menu-item>Next month</button>
-    </mat-menu>
+        <div *ngIf=" this.notecard.archieve==false  ">
+            <span role="button" (click)="Archivenote()" class="material-symbols-outlined">
+                archive
+            </span>
+        </div>
+        <div *ngIf=" this.notecard.archieve==true">
+            <span role="button" (click)="Unarchive()" class="material-symbols-outlined">
+                unarchive
+            </span>
+        </div>
+
+        <button [matMenuTriggerFor]="menu"><span role="button" class="material-symbols-outlined">
+                add_alert
+
+            </span></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Later Today</button>
+            <button mat-menu-item>Tomorrow</button>
+            <button mat-menu-item>Next week</button>
+            <button mat-menu-item>Next month</button>
+        </mat-menu>
         <span role="button" class="material-symbols-outlined">
             image
         </span>
@@ -31,6 +40,17 @@
         <span role="button" class="material-symbols-outlined">
             palette
         </span>
+
+       <div *ngIf=" this.notecard.trash==true && this.notecard.archieve==false">
+        <span class="material-symbols-outlined">
+            restore_from_trash
+        </span>
+       </div>
+       <div (click)="deletenotes()" *ngIf=" this.notecard.trash==true">
+        <span  class="material-symbols-outlined">
+            delete_forever
+        </span>
+       </div>
 
     </div>
 
