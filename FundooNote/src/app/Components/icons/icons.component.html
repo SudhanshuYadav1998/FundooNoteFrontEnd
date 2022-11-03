@@ -41,7 +41,7 @@
             palette
         </span>
 
-       <div *ngIf=" this.notecard.trash==true && this.notecard.archieve==false">
+       <div (click)="removeTrashnote()" *ngIf=" this.notecard.trash==true && this.notecard.archieve==false">
         <span class="material-symbols-outlined">
             restore_from_trash
         </span>

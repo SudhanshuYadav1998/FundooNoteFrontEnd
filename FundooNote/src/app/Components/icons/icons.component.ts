@@ -58,6 +58,20 @@ export class IconsComponent implements OnInit {
     })
     
   }
+  removeTrashnote(){
+
+    let reqdata={
+      
+      trash:false,  // it is coming from backend api
+    }
+    this.note.movefromtrashnote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
+      console.log("Note is removed from trash");
+
+      console.log(response);
+      
+    })
+    
+  }
   deletenotes(){
     let reqdata={
       

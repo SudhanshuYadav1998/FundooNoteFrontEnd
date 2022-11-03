@@ -97,4 +97,17 @@ deletenote(data:any,id:any){
   }
  return this.http.deleteservice (`https://localhost:44391/api/Notes/Delete?notesid=${id}`,data,true,header)
 }
+movefromtrashnote(data:any,id:any){
+
+  console.log(data,this.token);
+  
+  
+  let header={
+    headers:new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':'Bearer '+this.token
+    })
+  }
+ return this.http.putservice(`https://localhost:44391/api/Notes/Trash?noteId=${id}`,data,true,header)
+}
 }
