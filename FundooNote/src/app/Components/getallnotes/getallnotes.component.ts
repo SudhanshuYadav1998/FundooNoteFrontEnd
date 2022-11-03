@@ -16,11 +16,17 @@ export class GetallnotesComponent implements OnInit {
     this.getallnotes();
   }
   getallnotes(){ 
-    this.note.getallnote().subscribe((response:any)=>
-   console.log(this.notelist= response)
-
-    )
+    this.note.getallnote().subscribe((response:any)=>{
+   console.log(this.notelist= response);
+   this.notelist =this.notelist.filter((data:any) => {  
+    console.log(data.trash)
+    return data.trash === false && data.archieve === false;
     
+   
+  })
+    
+  })
+
   }
 
 }

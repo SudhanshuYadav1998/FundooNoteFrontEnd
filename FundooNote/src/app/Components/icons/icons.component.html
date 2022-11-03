@@ -1,20 +1,33 @@
-<div class="container"  >
-    <div class="mydiv" fxLayout="row" fxLayoutAlign="space-evenly center" >
-        <span role="button"  (click)="Archivenote()" class="material-symbols-outlined">
+<div class="container">
+    <div class="mydiv" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <span role="button" (click)="Archivenote()" class="material-symbols-outlined">
             archive
         </span>
-        <span role="button" class="material-symbols-outlined">
+        <button [matMenuTriggerFor]="menu"><span role="button" class="material-symbols-outlined">
             add_alert
-        </span>
+
+        </span></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item >Later Today</button>
+        <button mat-menu-item>Tomorrow</button>
+        <button mat-menu-item >Next week</button>
+        <button mat-menu-item>Next month</button>
+    </mat-menu>
         <span role="button" class="material-symbols-outlined">
             image
         </span>
         <span role="button" class="material-symbols-outlined">
             person_add
         </span>
-        <span role="button" class="material-symbols-outlined">
-            more_vert
-        </span>
+
+        <button [matMenuTriggerFor]="menu1"><span role="button" class="material-symbols-outlined">
+                more_vert
+
+            </span></button>
+        <mat-menu #menu1="matMenu">
+            <button mat-menu-item (click)="Trashnote()">Delete Note</button>
+            <button mat-menu-item>Add Label</button>
+        </mat-menu>
         <span role="button" class="material-symbols-outlined">
             palette
         </span>

@@ -31,6 +31,7 @@ import { IconsComponent } from './Components/icons/icons.component';
 import {MatCardModule} from '@angular/material/card';
 import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

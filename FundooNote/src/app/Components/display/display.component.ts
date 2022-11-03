@@ -9,6 +9,7 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 })
 export class DisplayComponent implements OnInit {
   @Input() displayMessage: any;
+  @Input() archievelist:any;
   title: any;
   description: any;
 

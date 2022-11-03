@@ -15,18 +15,13 @@ export class IconsComponent implements OnInit {
   constructor(private note:NotesService) { }
 
   ngOnInit(): void {
-    console.log(this.notecard);
-     
-   
-    this.title=this.notecard.title,
-    this.description=this.notecard.description
+ 
   }
   Archivenote(){
 
     let reqdata={
       
-       noteId: this.notecard.id, //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
-      archived:true,  // it is coming from backend api
+      archive:true,  // it is coming from backend api
     }
     this.note.archievenote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
       console.log("Note is archived");
@@ -39,8 +34,7 @@ export class IconsComponent implements OnInit {
      
     let reqdata={
       
-      noteId: this.notecard.id, //this notecard is coming from display.html - <app-icons & this noteIdlist is taken as a assumption by ourselves for taking id of notes
-      archived:false,  // it is coming from backend api
+      archive:false,  // it is coming from backend api
     }
     this.note.archievenote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
       console.log("Note is Unarchived");
@@ -48,7 +42,20 @@ export class IconsComponent implements OnInit {
       console.log(response);
       
     })
-    window.location.reload();
+  }
+  Trashnote(){
+
+    let reqdata={
+      
+      trash:true,  // it is coming from backend api
+    }
+    this.note.trashnote(reqdata,this.notecard.noteId).subscribe((response:any) =>{
+      console.log("Note is trashed");
+
+      console.log(response);
+      
+    })
+    
   }
 
   
