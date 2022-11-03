@@ -3,35 +3,32 @@
     <div class="form" fxLayout.xs="column">
         <div fxLayout="column" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
             
-            <div class="title" *ngIf="show || !show" (click)="isshow()" >
+            <div class="title" *ngIf="show || !show" (click)="isshow()">
 
                     <mat-form-field appearance="outline">
                         <input type="text" formControlName="title" matInput placeholder="title">
                     </mat-form-field>
 
             </div>
-              <div class="takenote" *ngIf="show">
+              <div class="takenote" *ngIf="show" (click)="isshow()">
 
                     <mat-form-field appearance="outline">
                         <input type="text" formControlName="description" matInput placeholder="Take a note..">
                     </mat-form-field>
                 </div>
                 
-                <div class="closebutton" *ngIf="show"  fxLayout="row" fxLayoutAlign="space-evenly center">
+                <div class="closebutton" *ngIf="show" (click)="isshow()" fxLayout="row" fxLayoutAlign="space-evenly center">
                   
-                        
+                        <app-icons></app-icons>
                    
                     <button class="button" fxLayout.xs="row" >Close</button>
 
-                </div>
-                <div class="icon" >
-                    <app-icons></app-icons>
                 </div>
 
 
         </div>
         <div class="rightdiv">
-            <div class="imageandpara">
+            <div class="imageandpara" *ngIf="show" (click)="isshow()">
 <button>
     <img class="image" src="../../../assets\push_pin_FILL0_wght400_GRAD0_opsz48 (2).svg" alt="">
 

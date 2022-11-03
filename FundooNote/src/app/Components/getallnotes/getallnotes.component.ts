@@ -18,8 +18,7 @@ export class GetallnotesComponent implements OnInit {
   getallnotes(){ 
     this.note.getallnote().subscribe((response:any)=>
    console.log(this.notelist= response)
-   
-   
+
     )
     
   }
