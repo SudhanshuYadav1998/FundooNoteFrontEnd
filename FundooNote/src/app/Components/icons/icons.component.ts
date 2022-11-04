@@ -112,6 +112,8 @@ export class IconsComponent implements OnInit {
     this.note.getColorNote(this.notecard.noteId,color).subscribe((response:any)=>{
       console.log(response);
     })
+    window.location.reload();
+
   }
 }
 
