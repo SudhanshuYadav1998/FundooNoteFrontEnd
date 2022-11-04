@@ -36,12 +36,14 @@ export class CreatenoteComponent implements OnInit {
      
       
       )
+      window.location.reload();
+
     }
     else{
       console.log("something wrong");
       
     }
-    
+
   }
 
 }

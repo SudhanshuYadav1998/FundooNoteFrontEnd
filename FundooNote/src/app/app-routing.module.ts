@@ -11,11 +11,12 @@ import { ArchieveComponent } from './Components/archieve/archieve.component';
 import { CreatenoteComponent } from './Components/createnote/createnote.component';
 import { DisplayComponent } from './Components/display/display.component';
 import { IconsComponent } from './Components/icons/icons.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 
 
 const routes: Routes = [ 
-  { path:'', redirectTo:"/register", pathMatch:'full' },
+  { path:'', redirectTo:"/signin", pathMatch:'full' },
 
  { path:'register',component:RegisterComponent},
  { path:'signin',component:LoginComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
  {path:'display',component:DisplayComponent},
  {path:'icons',component:IconsComponent},
  {path:'dashboard',
- component:DashboardComponent,
+ component:DashboardComponent,canActivate:[AuthenticationGuard],
+ 
 children:[
   { path:'notes',component:GetallnotesComponent},
   { path:'trash',component:TrashComponent},

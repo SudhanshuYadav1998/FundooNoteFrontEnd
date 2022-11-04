@@ -18,10 +18,12 @@ export class TrashComponent implements OnInit {
     this.note.getallnote().subscribe((response:any)=>{
     console.log(response)
     this.trashlist=response.filter((a:any)=>{
-    return a.trash===true
+    return a.trash===true 
   
     })
     console.log(this.trashlist);  
   })
+  
   }
+  
 }

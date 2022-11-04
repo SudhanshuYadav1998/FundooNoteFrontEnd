@@ -110,4 +110,18 @@ movefromtrashnote(data:any,id:any){
   }
  return this.http.putservice(`https://localhost:44391/api/Notes/Trash?noteId=${id}`,data,true,header)
 }
+
+ 
+getColorNote(id: any,color :any){
+
+  let header= {
+    headers: new HttpHeaders({
+
+      'Content-type': 'application/json',
+      'Authorization': "Bearer "+this.token
+    })
+  }
+    return this.http.putservice(`https://localhost:44391/api/Notes/AddColor?NotesId=${id}&color=${color}`,color,true,header)
+
+}
 }

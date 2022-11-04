@@ -17,10 +17,11 @@ getallarchievenote(){
   this.note.getallnote().subscribe((response:any)=>{
   console.log(response)
   this.archievelist=response.filter((a:any)=>{
-  return a.archieve===true
+  return a.archieve===true && a.trash===false
 
   })
   console.log(this.archievelist);  
 })
+
 }
 }

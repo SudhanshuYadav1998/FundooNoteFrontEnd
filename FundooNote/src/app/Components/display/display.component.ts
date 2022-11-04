@@ -28,7 +28,8 @@ export class DisplayComponent implements OnInit {
       console.log('The dialog was closed');
       this.title=result;
       this.description=result;
-    });
+    })
+
   }
   messageReceivedFromNote(e:any){  // this is used for data sharing between icons(child) and displaynotes(parent)
     console.log(e);

@@ -1,56 +1,70 @@
 <div class="container">
-    <div class="mydiv" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div class="mydiv"  fxLayout="row"
+        fxLayoutAlign="space-evenly center">
 
-        <div *ngIf=" this.notecard.archieve==false  ">
+        <div *ngIf=" this.notecard.archieve==false && this.notecard.trash==false ">
             <span role="button" (click)="Archivenote()" class="material-symbols-outlined">
                 archive
             </span>
         </div>
-        <div *ngIf=" this.notecard.archieve==true">
+        <div *ngIf=" this.notecard.archieve==true && this.notecard.trash==false">
             <span role="button" (click)="Unarchive()" class="material-symbols-outlined">
                 unarchive
             </span>
         </div>
 
-        <button [matMenuTriggerFor]="menu"><span role="button" class="material-symbols-outlined">
+        <span *ngIf="  this.notecard.trash==false" role="button" [matMenuTriggerFor]="menu"><span role="button" class="material-symbols-outlined">
                 add_alert
 
-            </span></button>
+            </span></span>
         <mat-menu #menu="matMenu">
             <button mat-menu-item>Later Today</button>
             <button mat-menu-item>Tomorrow</button>
             <button mat-menu-item>Next week</button>
             <button mat-menu-item>Next month</button>
         </mat-menu>
-        <span role="button" class="material-symbols-outlined">
+        <span *ngIf="  this.notecard.trash==false" role="button" class="material-symbols-outlined">
             image
         </span>
-        <span role="button" class="material-symbols-outlined">
+        <span *ngIf="  this.notecard.trash==false" role="button" class="material-symbols-outlined">
             person_add
         </span>
 
-        <button [matMenuTriggerFor]="menu1"><span role="button" class="material-symbols-outlined">
+        <span *ngIf="  this.notecard.trash==false" role="button" [matMenuTriggerFor]="menu1">
+            <span role="button" class="material-symbols-outlined">
                 more_vert
 
-            </span></button>
+            </span></span>
         <mat-menu #menu1="matMenu">
             <button mat-menu-item (click)="Trashnote()">Delete Note</button>
             <button mat-menu-item>Add Label</button>
         </mat-menu>
-        <span role="button" class="material-symbols-outlined">
-            palette
-        </span>
 
-       <div (click)="removeTrashnote()" *ngIf=" this.notecard.trash==true && this.notecard.archieve==false">
-        <span class="material-symbols-outlined">
-            restore_from_trash
-        </span>
-       </div>
-       <div (click)="deletenotes()" *ngIf=" this.notecard.trash==true">
-        <span  class="material-symbols-outlined">
-            delete_forever
-        </span>
-       </div>
+        <div role="button" class="add" *ngIf=" this.notecard.trash==false"  [matMenuTriggerFor]="color">
+            <span role="button" class="material-symbols-outlined">
+                palette
+            </span>
+            <mat-menu #color="matMenu">
+                <div fxLayout="row wrap" style="padding-left: 8px;">
+                    <div *ngFor="let color of colorsArr" class="colorBox">
+                        <button class="colors" mat-icon-button mat-raised-button [style.background]="color?.Colorcode"
+                            (click)="getNoteColor(color?.Colorcode)"></button>
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
+
+
+        <div (click)="removeTrashnote()" *ngIf=" this.notecard.trash==true ">
+            <span class="material-symbols-outlined">
+                restore_from_trash
+            </span>
+        </div>
+        <div (click)="deletenotes()" *ngIf=" this.notecard.trash==true">
+            <span class="material-symbols-outlined">
+                delete_forever
+            </span>
+        </div>
 
     </div>
 
